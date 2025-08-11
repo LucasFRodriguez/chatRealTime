@@ -4,12 +4,13 @@ import Join from './components/Join/Join'
 import Chat from './components/Chat/Chat'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [chatVisibility, setchatVisibility] = useState(false)
 
   return (
     <div className='App' >
-        <Join/>
-        <Chat/>
+      {
+        chatVisibility ? <Chat/> : <Join/>
+      }
     </div>
   )
 }
